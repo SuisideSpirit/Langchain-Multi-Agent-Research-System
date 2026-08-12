@@ -1,4 +1,6 @@
-from src.tools.tools import web_search ,scrape_url
+from src.pipeline.pipeline import run_reasearch_pipeline
+from src.tools.tools import web_search
+from dotenv import load_dotenv
 
-r = web_search.invoke("What is AI?")
-print(r)
+topic = "Impact of AI on tech job"
+run_reasearch_pipeline(topic= topic)
